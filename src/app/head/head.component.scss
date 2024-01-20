@@ -1,0 +1,84 @@
+@use"../media-queries/mixin.scss" as * ; 
+
+@import url('https://fonts.cdnfonts.com/css/neo-sans-arabic');
+
+section{
+    
+    margin: 50px 0px 15px 0px;
+    display: flex;
+    justify-content: space-between;
+    .edit-btn{
+        button{
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border: 1px solid #E9EAEA;
+            border-radius: 4px;
+            padding: 5px 10px; 
+            transition: all 0.3s;
+            &:hover{
+                background-color: #F3F5F7;
+            }
+            @include beakpoints (mobile) {
+                padding: 3px 7px; 
+                font-size: 11px;
+            }
+            span{
+                padding-right: 10px;
+                color: #1C1C28;
+                font-weight: 400;
+                font-size: 14px;
+                font-family: 'Neo Sans Arabic', sans-serif ;
+               
+                @include beakpoints (mobile) {
+                    padding: 2px 5px; 
+                    font-size: 10px ;
+
+                }
+            }
+           
+
+            .icon-container{
+                img{
+                    
+                    @include beakpoints (mobile) {
+                       width: 15px;
+    
+                    } 
+                }
+            }
+        }
+    }
+    
+    .ticket-info{
+        display: flex;
+        align-items: center;
+        h3{
+            margin: 0px;
+            font-size: 16px;
+            color: #1C1C28;
+            padding-right: 10px;
+            
+            @include beakpoints (mobile) {
+                font-size: 14px;
+             } 
+        }
+        .back-btn{
+            border-radius: 8px;
+            background: #E7EAED;
+            border: none;
+            padding: 10px;
+            display: flex;
+            align-items: center ;
+            transition: all 0.3s;
+            &:hover{
+                background-color: #F3F5F7;
+            }
+            @include beakpoints (mobile) {
+                padding: 4px;
+            } 
+        }
+    }
+}
+
+

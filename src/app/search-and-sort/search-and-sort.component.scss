@@ -1,0 +1,229 @@
+@use"../media-queries/mixin.scss" as * ; 
+
+@import url('https://fonts.cdnfonts.com/css/neo-sans-arabic');
+
+section{
+    margin: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    @include beakpoints (mobile) {
+       flex-direction: column;
+       align-items: flex-start;
+    }
+    .options{
+        display: flex;
+        align-items: center;
+        
+        ::ng-deep .p-inputswitch {
+            width: 34px;
+            height: 18px;
+        }
+        .p-button{
+            background: #8A74F9 !important;
+            padding: 10px 15px ;
+            font-family: 'Neo Sans Arabic', sans-serif ;
+            font-size: 12px;
+            font-weight: 400;
+            margin-right: 20px;
+            border: none;
+          
+            @include beakpoints (mobile) {
+                padding: 5px 10px ;
+                font-size: 9px;
+
+             }
+        }
+        
+        .p-button.p-button-success:enabled:hover{
+            border: 1px solid none;
+        }
+        
+        .p-button.p-button-success:enabled:focus {
+            box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #8A74F9, 0 1px 2px 0 black;
+        }
+    
+        p{
+            padding-right: 10px;
+            @include beakpoints (mobile) {
+                font-size: 12px;
+
+             }
+        }
+
+
+            .p-element{
+                display: flex;
+                align-items: center;
+            }
+    
+        
+            
+            ::ng-deep .p-inputswitch .p-inputswitch-slider:before {
+                background: #ffffff;
+                width: 15px;
+                height: 15px;
+                left: 0.15rem;
+                margin-top: -0.439rem;
+                border-radius: 50%;
+                transition-duration: 0.2s;
+            }
+        
+            ::ng-deep.p-inputswitch.p-inputswitch-checked .p-inputswitch-slider:before {
+                transform: translateX(0.9rem);
+        
+            }
+        
+            
+            
+            
+            
+            
+            ::ng-deep .p-inputswitch.p-inputswitch-checked .p-inputswitch-slider {
+                background:  #8A74F9;
+              }
+            
+              ::ng-deep .p-inputswitch.p-inputswitch-checked:not(.p-disabled):hover .p-inputswitch-slider {
+                background:  #8A74F9;
+            }
+        
+        
+       
+        p{
+            margin: 0;
+            font-family: 'Neo Sans Arabic', sans-serif ;
+    
+        }
+    }
+    
+    .search-container{
+        display: flex;
+        align-items: center;
+        @include beakpoints (vsm) {
+            margin-bottom: 20px;
+
+         }
+        @include beakpoints (mobile) {
+            margin-bottom: 20px;
+
+         }
+        .arrow-btn{
+            background-color: white;
+            border: 1px solid rgba(146, 161, 173, 0.40);
+            width: 36px;
+            height: 36px;
+            margin-right: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            &:hover{
+                background-color: #F3F5F7;
+            }
+            img{
+                width: 100%;
+            }
+            @include beakpoints (vsm) {
+                width: 20px;
+                height: 20px;
+            }
+            @include beakpoints (mobile) {
+                width: 25px;
+                height: 25px;
+            }
+        }
+    
+        .setting-btn{
+            background-color: white;
+            border: none;
+            width: 36px;
+            height: 36px;
+            border: 1px solid rgba(146, 161, 173, 0.40);
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            &:hover{
+                background-color: #F3F5F7;
+            }
+            img{
+                width: 100%;
+            }
+            @include beakpoints (vsm) {
+                width: 20px;
+                height: 20px;
+            }
+            @include beakpoints (mobile) {
+                width: 25px;
+                height: 25px;
+            }
+        }
+    
+        .search-input{
+            margin-right: 15px;
+            position: relative;
+            input{
+                padding: 5px 30px 5px 10px  ;
+                border: 1px solid rgba(146, 161, 173, 0.40);
+                font-family: 'Neo Sans Arabic', sans-serif ;
+                outline: none;
+                color: #1C1C28;
+    
+                @include beakpoints (vsm) {
+                    width: 100% ;
+                    padding: 1px 20px 1px 10px  ;
+                    font-size: 11px;
+                }
+                @include beakpoints (mobile) {
+                    width: 100% ;
+                    padding: 3px 25px 3px 20px  ;
+                    font-size: 11px;
+                }
+                &::placeholder{
+                    color: rgba(146, 161, 173, 0.40);
+                    @include beakpoints (vsm) {
+                        padding: 1px 20px 1px 10px  ;
+                        font-size: 11px;
+                    }
+                }
+            }
+    
+            .search-icon{
+                position: absolute;
+                top: 50%;
+                right: 5px;
+                transform: translateY(-50%);
+                display: flex;
+                align-items: center;
+
+                
+                img{
+                    width: 100%;
+                }
+                @include beakpoints (vsm) {
+                width: 15px;
+                }
+            }
+    
+           
+        }
+        h3{
+            margin: 0;
+            color: #1C1C28;
+            font-weight: 400;
+    
+            @include beakpoints (vsm) {
+                font-size: 11px;
+            }
+            @include beakpoints (mobile) {
+                font-size: 14px;
+            }
+        }
+    }
+}

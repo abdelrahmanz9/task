@@ -1,0 +1,108 @@
+
+<p-table 
+[value]="customers"
+[paginator]="true"
+[rows]="3"
+[showCurrentPageReport]="true"
+[tableStyle]="{ 'min-width': '50rem' }"
+currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+[rowsPerPageOptions]="[3, 10, 20]"
+ >
+    <ng-template pTemplate="header">
+        <tr>
+            <th>#</th>
+            <th>المستخدم</th>
+            <th>رقم التذكرة</th>
+            <th pSortableColumn="costOfTicket" style="width:20%">قيمى التزكرة<p-sortIcon  field="costOfTicket"></p-sortIcon></th>
+
+            <!-- <th class="head-with-icon-container">
+                <div class="head-with-icon" >
+                    <span> </span>
+
+                    <div class="icon-container">
+                        <img src="../../assets/arrow-3.svg" alt=""> 
+                    </div>
+            
+                </div>
+                
+            </th> -->
+            <th>السينمات</th>
+            <th>عدد الأشخاص</th>
+            <th>عدد مرات الشراء</th>
+
+            <th>التزكرة</th>
+          
+          
+            
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body"   let-customer let-rowIndex="rowIndex" >
+        <tr>
+            <td>{{rowIndex + 1}}</td>
+            <td >
+                <div class="customer-personal-info-container">
+
+                    <div class="all-info">
+                        <div class="customer-img-container">
+                            <img [src]="customer.img" alt="">
+                        </div>
+                        <div class="customer-personal-info">
+                            <h6>{{customer.name}}</h6>
+
+                            <span>{{customer.phoneNumber}}</span>
+
+                        </div>
+                       
+                    </div>
+                </div>
+               
+               
+            </td>
+            <td>{{customer.ticketNumber}}</td>
+            <td class="cost-of-ticket">{{customer.costOfTicket | currency:"USD"}}</td>
+            <td class="location">
+                <div class="location-container">
+                    <p>{{customer.location}}</p>
+
+                    <div class="hover">
+                        <span class="description">صيدناوي مول , برج العرب</span>
+                        <span class="arrow"></span>
+                    </div>
+                </div>
+                
+               
+            </td>
+            <td>{{customer.numberOfPeaple}}</td>
+            <td class="number-of-buying">{{customer.numberOfBuying}}</td>
+
+            <td >
+                <div class="download-file-container">
+                    <div class="download-file">
+                        <div class="ticket-icon">
+                            <img src="../../assets/ticket-2.svg" alt="">
+                        </div>
+                        <div class="ticket-info">
+                            <p> pdf.45 تزكرة رقم</p>
+                            <span><small>{{customer.sizeOfFile}}</small> . <small>{{customer.typeOfFile}}</small></span>
+                        </div>
+                        <button class="download-btn">
+                            <img src="../../assets/Group 1000010390.svg" alt="">
+                        </button>
+                        
+                        
+                    </div>
+                </div>
+               
+              
+            </td>
+            
+            
+            
+        </tr>
+    </ng-template>
+ 
+    
+
+</p-table> 
+
+

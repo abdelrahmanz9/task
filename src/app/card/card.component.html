@@ -1,0 +1,65 @@
+<section>
+<div class="card-container">
+    
+        <div class="top-info-container">
+          
+                <div class="top-info">
+                    <div class="ticket-info">
+                        <h3>عرض التذكرة الخاصة بالفيلم</h3>
+                        <div class="ticket-link">
+                            <button (click)="copyText()">
+                                <img src="../../assets/Group.svg" alt="">
+                            </button>
+                            <input type="text" #inputCopyed value="www.tazkty.com/473847">
+                           
+                        </div>
+                        <p>فعال حتي 15 يوليو 2023</p>
+            
+                    </div>
+                    <div class="delete-btn-container">
+                        <button class="delete-btn">
+                            <div class="hover">
+                                <div class="hover-container">
+                                    <span>حذف</span>
+                                    <div class="arrow"></div>
+                                </div>
+                            </div>
+                            <img src="../../assets/outline/trash.svg" alt="">
+                            
+                        </button>
+
+                    </div>
+                    
+                </div>
+                <div class="more-info-container">
+                    <div class="discount-container">
+                        <p>خصم</p>
+                        <div>
+                            <div class="discount-details">
+                                <p>25%</p>
+                                <button class="send-btn">
+                                    <img src="../../assets/send-2.svg" alt="">
+
+                                    <span>مشاركة</span>
+        
+                                </button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <qrcode [qrdata]="'Your data string'" [width]="82" [margin]="1" [errorCorrectionLevel]="'M'"></qrcode>
+                    
+                </div>
+                <div class="wave-contaner"></div>
+
+            </div>
+        
+           
+
+   
+    
+   
+  
+</div>
+
+</section>

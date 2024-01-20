@@ -1,0 +1,111 @@
+@use"../media-queries/mixin.scss" as * ; 
+
+@import url('https://fonts.cdnfonts.com/css/neo-sans-arabic');
+
+
+::ng-deep tspan{
+    
+    @include beakpoints (mobile) {
+        font-size: 8px !important;
+    }
+    @include beakpoints (small) {
+        font-size: 9px !important;
+    }
+    font-family: 'Neo Sans Arabic', sans-serif !important ;
+    font-size: 12px;
+    font-weight: 500;
+    color:red !important;
+
+}
+ section{
+    background-color: white;
+    padding: 20px ;
+    height: 283px;
+    border-radius: 10px;
+    
+    @include beakpoints (mobile) {
+        padding: 10px !important;
+        height: 250px;
+
+    }
+
+   
+      
+}
+.statistics{
+    padding: 0px 25px 0px 10px;
+    display: flex;
+    justify-content: space-between;
+  
+    @include beakpoints (mobile) {
+        padding: 0px 15px 0px 5px;
+
+    }
+    .btn-container{
+        display: flex;
+        align-items: center;
+        button{
+            display: flex;
+            align-items: center;
+            border: none;
+            background-color: #F3F5F7 !important;
+            border-radius: 10px;
+            padding: 5px 10px;
+            border: 1px solid #E9EAEA;
+           
+            @include beakpoints (mobile) {
+                padding: 5px 8px;
+
+            }
+            img{
+                margin-right: 10px;
+                
+                @include beakpoints (mobile) {
+                    margin-right: 5px;
+    
+                }
+            }
+            p{
+                margin: 0;
+                font-size: 12.112px;
+                font-weight: 400;
+                font-family: 'Neo Sans Arabic', sans-serif ;
+               
+                @include beakpoints (mobile) {
+                    font-size: 11px;
+
+                }
+            }
+        }
+    }
+   
+
+    .statistics-info-container{
+        h4{
+            text-align: start;
+            font-size: 14px;
+            @include beakpoints (mobile) {
+                font-size: 13px;
+
+            }
+        }
+
+        .statistics-info{
+            display: flex;
+            justify-content: flex-start;
+            img{
+                padding-right: 10px;
+            }
+            p{
+                font-size: 14px;
+                margin: 0;
+                color: #99A1B7;
+              
+                @include beakpoints (mobile) {
+                    font-size: 9px;
+
+                }
+            }
+        }
+    }
+}

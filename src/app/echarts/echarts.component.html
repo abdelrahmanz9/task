@@ -1,0 +1,32 @@
+<section>
+  <div style="text-align:center">
+    <div class="statistics">
+      <div class="statistics-info-container">
+        <h4>إحصائيات إستخدام القسيمة</h4>
+        <div class="statistics-info">
+          <p>05 يوليو , 2023 - 05 أغسطس , 2023</p>
+
+          <img src="../../assets/arrow-down.svg" alt="">
+        </div>
+      </div>
+      <div class="btn-container">
+        <button>
+                    <p>سنويا</p>
+
+          <img src="../../assets/arrow-down.svg" alt="">
+        </button>
+      </div>
+      
+     
+    </div>
+    <apx-chart
+    
+      [series]="chartOptions.series!"
+      [chart]="chartOptions.chart!"
+      [xaxis]="chartOptions.xaxis!"
+      [yaxis]="chartOptions.yaxis!"
+      
+    ></apx-chart>
+  </div>
+</section>
+
